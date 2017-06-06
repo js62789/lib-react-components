@@ -1,0 +1,11 @@
+.inputGroup {
+  width: 100%;
+}
+
+.textInput {
+  border: 1px solid #bbb;
+}
+
+.btn:not(:last-child) {
+  margin-right: -1px;
+}
