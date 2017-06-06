@@ -1,11 +1,11 @@
-.inputGroup {
-  width: 100%;
-}
+@import '../../styles/variables.css';
+@import '../../styles/reset.css';
 
 .textInput {
-  border: 1px solid #bbb;
+  composes: formControl from '../../styles/forms.css';
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-.btn:not(:last-child) {
-  margin-right: -1px;
+.textInput:focus {
+  border-color: var(--formControlFocusBorderColor);
 }

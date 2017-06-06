@@ -1,0 +1,15 @@
+@import './variables.css';
+
+.formControl {
+  background-color: white;
+  border: var(--baseBorderWidth) solid var(--baseBorderColor);
+  border-radius: var(--baseBorderRadius);
+  font-size: var(--baseFontSize);
+  height: calc(2 * var(--formControlPaddingVertical) + var(--baseFontSize) + 2 * var(--baseBorderWidth));
+  line-height: 1;
+  padding: var(--formControlPaddingVertical) var(--formControlPaddingHorizontal);
+}
+
+.formControl:focus {
+  outline: 0;
+}

@@ -1,5 +1,104 @@
+@import '../../styles/variables.css';
+@import '../../styles/reset.css';
+
 .btn {
+  composes: formControl from '../../styles/forms.css';
   cursor: pointer;
-  border: 1px solid #bbb;
-  padding: 0.6rem 0.8rem;
+  text-align: center;
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: color(var(--defaultButtonBackgroundColor) shade(10%));
+  border-color: color(var(--baseBorderColor) shade(10%));
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 2px color(var(--defaultButtonBorderColor) alpha(50%));
+}
+
+.primaryBtn {
+  composes: btn;
+  color: white;
+  background-color: var(--primaryButtonBackgroundColor);
+  border-color: var(--primaryButtonBorderColor);
+}
+
+.primaryBtn:hover,
+.primaryBtn:active {
+  background-color: color(var(--primaryButtonBackgroundColor) shade(10%));
+  border-color: color(var(--primaryButtonBorderColor) shade(10%));
+}
+
+.primaryBtn:focus {
+  box-shadow: 0 0 0 2px color(var(--primaryButtonBorderColor) alpha(50%));
+}
+
+.infoBtn {
+  composes: btn;
+  color: white;
+  background-color: var(--infoButtonBackgroundColor);
+  border-color: var(--infoButtonBorderColor);
+}
+
+.infoBtn:hover,
+.infoBtn:active {
+  background-color: color(var(--infoButtonBackgroundColor) shade(10%));
+  border-color: color(var(--infoButtonBorderColor) shade(10%));
+}
+
+.infoBtn:focus {
+  box-shadow: 0 0 0 2px color(var(--infoButtonBorderColor) alpha(50%));
+}
+
+.successBtn {
+  composes: btn;
+  color: white;
+  background-color: var(--successButtonBackgroundColor);
+  border-color: var(--successButtonBorderColor);
+}
+
+.successBtn:hover,
+.successBtn:active {
+  background-color: color(var(--successButtonBackgroundColor) shade(10%));
+  border-color: color(var(--successButtonBorderColor) shade(10%));
+}
+
+.successBtn:focus {
+  box-shadow: 0 0 0 2px color(var(--successButtonBorderColor) alpha(50%));
+}
+
+.warningBtn {
+  composes: btn;
+  color: white;
+  background-color: var(--warningButtonBackgroundColor);
+  border-color: var(--warningButtonBorderColor);
+}
+
+.warningBtn:hover,
+.warningBtn:active {
+  background-color: color(var(--warningButtonBackgroundColor) shade(10%));
+  border-color: color(var(--warningButtonBorderColor) shade(10%));
+}
+
+.warningBtn:focus {
+  box-shadow: 0 0 0 2px color(var(--warningButtonBorderColor) alpha(50%));
+}
+
+.dangerBtn {
+  composes: btn;
+  color: white;
+  background-color: var(--dangerButtonBackgroundColor);
+  border-color: var(--dangerButtonBorderColor);
+}
+
+.dangerBtn:hover,
+.dangerBtn:active {
+  background-color: color(var(--dangerButtonBackgroundColor) shade(10%));
+  border-color: color(var(--dangerButtonBorderColor) shade(10%));
+}
+
+.dangerBtn:focus {
+  box-shadow: 0 0 0 2px color(var(--dangerButtonBorderColor) alpha(50%));
 }

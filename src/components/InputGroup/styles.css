@@ -1,0 +1,21 @@
+@import '../../styles/variables.css';
+
+.inputGroup {
+  width: 100%;
+}
+
+.inputGroup *{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inputGroup *:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: -var(--baseBorderWidth);
+}
+
+.inputGroup *:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

@@ -1,0 +1,29 @@
+@import '../../styles/variables.css';
+@import '../../styles/reset.css';
+
+:root {
+  --iconSize: 0.5rem;
+}
+
+.dropdown {
+  composes: formControl from '../../styles/forms.css';
+  background-image:
+    linear-gradient(45deg, transparent 50%, #bbb 50%),
+    linear-gradient(135deg, #bbb 50%, transparent 50%);
+  background-position:
+    calc(100% - calc(2 * var(--iconSize))) calc(var(--formControlPaddingVertical) + calc(0.3 / var(--iconSize))),
+    calc(100% - var(--iconSize)) calc(var(--formControlPaddingVertical) + calc(0.3 / var(--iconSize)));
+  background-size:
+    var(--iconSize) var(--iconSize),
+    var(--iconSize) var(--iconSize);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  padding-right: calc(4 * var(--iconSize));
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.dropdown:focus {
+  border-color: var(--formControlFocusBorderColor);
+}
