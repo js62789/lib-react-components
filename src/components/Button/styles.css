@@ -18,87 +18,87 @@
   box-shadow: 0 0 0 2px color(var(--defaultButtonBorderColor) alpha(50%));
 }
 
-.primaryBtn {
+.btnPrimary {
   composes: btn;
   color: white;
   background-color: var(--primaryButtonBackgroundColor);
   border-color: var(--primaryButtonBorderColor);
 }
 
-.primaryBtn:hover,
-.primaryBtn:active {
+.btnPrimary:hover,
+.btnPrimary:active {
   background-color: color(var(--primaryButtonBackgroundColor) shade(10%));
   border-color: color(var(--primaryButtonBorderColor) shade(10%));
 }
 
-.primaryBtn:focus {
+.btnPrimary:focus {
   box-shadow: 0 0 0 2px color(var(--primaryButtonBorderColor) alpha(50%));
 }
 
-.infoBtn {
+.btnInfo {
   composes: btn;
   color: white;
   background-color: var(--infoButtonBackgroundColor);
   border-color: var(--infoButtonBorderColor);
 }
 
-.infoBtn:hover,
-.infoBtn:active {
+.btnInfo:hover,
+.btnInfo:active {
   background-color: color(var(--infoButtonBackgroundColor) shade(10%));
   border-color: color(var(--infoButtonBorderColor) shade(10%));
 }
 
-.infoBtn:focus {
+.btnInfo:focus {
   box-shadow: 0 0 0 2px color(var(--infoButtonBorderColor) alpha(50%));
 }
 
-.successBtn {
+.btnSuccess {
   composes: btn;
   color: white;
   background-color: var(--successButtonBackgroundColor);
   border-color: var(--successButtonBorderColor);
 }
 
-.successBtn:hover,
-.successBtn:active {
+.btnSuccess:hover,
+.btnSuccess:active {
   background-color: color(var(--successButtonBackgroundColor) shade(10%));
   border-color: color(var(--successButtonBorderColor) shade(10%));
 }
 
-.successBtn:focus {
+.btnSuccess:focus {
   box-shadow: 0 0 0 2px color(var(--successButtonBorderColor) alpha(50%));
 }
 
-.warningBtn {
+.btnWarning {
   composes: btn;
   color: white;
   background-color: var(--warningButtonBackgroundColor);
   border-color: var(--warningButtonBorderColor);
 }
 
-.warningBtn:hover,
-.warningBtn:active {
+.btnWarning:hover,
+.btnWarning:active {
   background-color: color(var(--warningButtonBackgroundColor) shade(10%));
   border-color: color(var(--warningButtonBorderColor) shade(10%));
 }
 
-.warningBtn:focus {
+.btnWarning:focus {
   box-shadow: 0 0 0 2px color(var(--warningButtonBorderColor) alpha(50%));
 }
 
-.dangerBtn {
+.btnDanger {
   composes: btn;
   color: white;
   background-color: var(--dangerButtonBackgroundColor);
   border-color: var(--dangerButtonBorderColor);
 }
 
-.dangerBtn:hover,
-.dangerBtn:active {
+.btnDanger:hover,
+.btnDanger:active {
   background-color: color(var(--dangerButtonBackgroundColor) shade(10%));
   border-color: color(var(--dangerButtonBorderColor) shade(10%));
 }
 
-.dangerBtn:focus {
+.btnDanger:focus {
   box-shadow: 0 0 0 2px color(var(--dangerButtonBorderColor) alpha(50%));
 }

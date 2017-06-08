@@ -1,22 +1,28 @@
 :root {
+  --primaryColor: #0275d8;
+  --successColor: #5cb85c;
+  --infoColor: #5bc0de;
+  --warningColor: #f0ad4e;
+  --dangerColor: #d9534f;
   --baseFontSize: 1.6rem;
   --baseFontColor: #292B30;
   --baseBorderWidth: 0.1rem;
   --baseBorderColor: #bbb;
   --baseBorderRadius: 0.4rem;
+  --formControlLineHeight: 1.25;
   --formControlFocusBorderColor: #66afe9;
   --formControlPaddingVertical: 0.8rem;
   --formControlPaddingHorizontal: 1.6rem;
   --defaultButtonBackgroundColor: white;
   --defaultButtonBorderColor: var(--baseBorderColor);
-  --primaryButtonBackgroundColor: #0275d8;
-  --primaryButtonBorderColor: #0275d8;
-  --successButtonBackgroundColor: #5cb85c;
-  --successButtonBorderColor: #5cb85c;
-  --infoButtonBackgroundColor: #5bc0de;
-  --infoButtonBorderColor: #5bc0de;
-  --warningButtonBackgroundColor: #f0ad4e;
-  --warningButtonBorderColor: #f0ad4e;
-  --dangerButtonBackgroundColor: #d9534f;
-  --dangerButtonBorderColor: #d9534f;
+  --primaryButtonBackgroundColor: var(--primaryColor);
+  --primaryButtonBorderColor: var(--primaryColor);
+  --successButtonBackgroundColor: var(--successColor);
+  --successButtonBorderColor: var(--successColor);
+  --infoButtonBackgroundColor: var(--infoColor);
+  --infoButtonBorderColor: var(--infoColor);
+  --warningButtonBackgroundColor: var(--warningColor);
+  --warningButtonBorderColor: var(--warningColor);
+  --dangerButtonBackgroundColor: var(--dangerColor);
+  --dangerButtonBorderColor: var(--dangerColor);
 }

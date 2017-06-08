@@ -1,0 +1,100 @@
+@import '../../styles/variables.css';
+
+:root {
+  --border: 1px solid rgba(0,0,0,.125);
+}
+
+.card {
+  background-color: white;
+  border: var(--border);
+  border-radius: var(--baseBorderRadius);
+}
+
+.cardCenterAligned {
+  text-align: center;
+}
+
+.cardRightAligned {
+  text-align: right;
+}
+
+.cardPrimary {
+  border-color: var(--primaryColor);
+}
+
+.cardInfo {
+  border-color: var(--infoColor);
+}
+
+.cardSuccess {
+  border-color: var(--successColor);
+}
+
+.cardWarning {
+  border-color: var(--warningColor);
+}
+
+.cardDanger {
+  border-color: var(--dangerColor);
+}
+
+.cardInverted {
+  color: rgba(255,255,255,.65);
+}
+
+.cardInverted .cardTitle {
+  color: #fff;
+}
+
+.cardPrimary.cardInverted {
+  background-color: var(--primaryColor);
+}
+
+.cardInfo.cardInverted {
+  background-color: var(--infoColor);
+}
+
+.cardSuccess.cardInverted {
+  background-color: var(--successColor);
+}
+
+.cardWarning.cardInverted {
+  background-color: var(--warningColor);
+}
+
+.cardDanger.cardInverted {
+  background-color: var(--dangerColor);
+}
+
+.cardImage {
+  border-top-left-radius: var(--baseBorderRadius);
+  border-top-right-radius: var(--baseBorderRadius);
+}
+
+.cardTitle {
+  margin-bottom: 1.2rem;
+}
+
+.cardBody {
+  padding: 2rem;
+}
+
+.cardText:last-child {
+  margin-bottom: 0;
+}
+
+.cardTagline {
+  background-color: #f7f7f9;
+  padding: 1.2rem 2rem;
+}
+
+.cardHeader {
+  composes: cardTagline;
+  border-bottom: var(--border);
+  margin-bottom: 0;
+}
+
+.cardFooter {
+  composes: cardTagline;
+  border-top: var(--border);
+}

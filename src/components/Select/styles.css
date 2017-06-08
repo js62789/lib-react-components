@@ -11,8 +11,8 @@
     linear-gradient(45deg, transparent 50%, #bbb 50%),
     linear-gradient(135deg, #bbb 50%, transparent 50%);
   background-position:
-    calc(100% - calc(2 * var(--iconSize))) calc(var(--formControlPaddingVertical) + calc(0.3 / var(--iconSize))),
-    calc(100% - var(--iconSize)) calc(var(--formControlPaddingVertical) + calc(0.3 / var(--iconSize)));
+    calc(100% - calc(2 * var(--iconSize))) calc(var(--formControlPaddingVertical) + calc(0.4 / var(--iconSize))),
+    calc(100% - var(--iconSize)) calc(var(--formControlPaddingVertical) + calc(0.4 / var(--iconSize)));
   background-size:
     var(--iconSize) var(--iconSize),
     var(--iconSize) var(--iconSize);
