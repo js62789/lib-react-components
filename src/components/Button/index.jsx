@@ -7,19 +7,19 @@ export class Button extends React.Component {
 
     switch (this.props.color) {
       case 'primary':
-        className = styles.primaryBtn;
+        className = styles.btnPrimary;
         break;
       case 'info':
-        className = styles.infoBtn;
+        className = styles.btnInfo;
         break;
       case 'success':
-        className = styles.successBtn;
+        className = styles.btnSuccess;
         break;
       case 'warning':
-        className = styles.warningBtn;
+        className = styles.btnWarning;
         break;
       case 'danger':
-        className = styles.dangerBtn;
+        className = styles.btnDanger;
         break;
       default:
         className = styles.btn;

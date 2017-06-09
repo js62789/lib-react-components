@@ -5,8 +5,8 @@
   border: var(--baseBorderWidth) solid var(--baseBorderColor);
   border-radius: var(--baseBorderRadius);
   font-size: var(--baseFontSize);
-  height: calc(2 * var(--formControlPaddingVertical) + var(--baseFontSize) + 2 * var(--baseBorderWidth));
-  line-height: 1;
+  height: calc(2 * var(--formControlPaddingVertical) + var(--formControlLineHeight) * var(--baseFontSize) + 2 * var(--baseBorderWidth));
+  line-height: var(--formControlLineHeight);
   padding: var(--formControlPaddingVertical) var(--formControlPaddingHorizontal);
 }
 

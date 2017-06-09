@@ -1,0 +1,28 @@
+.header {
+  margin-top: 0;
+}
+
+.h1 {
+  composes: header;
+  font-size: 3rem;
+}
+
+.h2 {
+  composes: header;
+  font-size: 2.8rem;
+}
+
+.h3 {
+  composes: header;
+  font-size: 2.6rem;
+}
+
+.h4 {
+  composes: header;
+  font-size: 2.4rem;
+}
+
+.h5 {
+  composes: header;
+  font-size: 2.2rem;
+}
