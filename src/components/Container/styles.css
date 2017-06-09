@@ -1,0 +1,32 @@
+@import '../../styles/variables.css';
+
+.container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (--small-viewport) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (--medium-viewport) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (--large-viewport) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (--xlarge-viewport) {
+  .container {
+    width: 1140px;
+  }
+}

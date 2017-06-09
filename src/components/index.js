@@ -6,3 +6,5 @@ export * from './Image';
 export * from './Card';
 export * from './Header';
 export * from './Text';
+export * from './Grid';
+export * from './Container';
