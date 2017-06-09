@@ -3,30 +3,42 @@ import styles from './styles.css';
 
 export class Button extends React.Component {
   render() {
-    let className;
+    const { className, color, size, ...other } = this.props;
+    const classNames = [ styles.btn ];
 
-    switch (this.props.color) {
+    switch (color) {
       case 'primary':
-        className = styles.btnPrimary;
+        classNames.push(styles.btnPrimary);
         break;
       case 'info':
-        className = styles.btnInfo;
+        classNames.push(styles.btnInfo);
         break;
       case 'success':
-        className = styles.btnSuccess;
+        classNames.push(styles.btnSuccess);
         break;
       case 'warning':
-        className = styles.btnWarning;
+        classNames.push(styles.btnWarning);
         break;
       case 'danger':
-        className = styles.btnDanger;
+        classNames.push(styles.btnDanger);
         break;
-      default:
-        className = styles.btn;
+    }
+
+    switch (size) {
+      case 'small':
+        classNames.push(styles.btnSmall);
+        break;
+      case 'large':
+        classNames.push(styles.btnLarge);
+        break;
+    }
+
+    if (className) {
+      classNames.push(className);
     }
 
     return (
-      <button className={className}>{this.props.children}</button>
+      <button className={classNames.join(' ')} {...other} />
     );
   }
 }

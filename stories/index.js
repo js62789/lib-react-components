@@ -7,3 +7,4 @@ import './inputs';
 import './text';
 import './grid';
 import './container';
+import './layouts';

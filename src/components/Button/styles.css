@@ -8,6 +8,18 @@
   transition: all .2s ease-in-out;
 }
 
+.btnSmall {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.4rem;
+  border-radius: 0.32rem;
+}
+
+.btnLarge {
+  padding: 1.2rem 2.4rem;
+  font-size: 2rem;
+  border-radius: 0.48rem;
+}
+
 .btn:hover,
 .btn:active {
   background-color: color(var(--defaultButtonBackgroundColor) shade(10%));
@@ -19,7 +31,6 @@
 }
 
 .btnPrimary {
-  composes: btn;
   color: white;
   background-color: var(--primaryButtonBackgroundColor);
   border-color: var(--primaryButtonBorderColor);
@@ -36,7 +47,6 @@
 }
 
 .btnInfo {
-  composes: btn;
   color: white;
   background-color: var(--infoButtonBackgroundColor);
   border-color: var(--infoButtonBorderColor);
@@ -53,7 +63,6 @@
 }
 
 .btnSuccess {
-  composes: btn;
   color: white;
   background-color: var(--successButtonBackgroundColor);
   border-color: var(--successButtonBorderColor);
@@ -70,7 +79,6 @@
 }
 
 .btnWarning {
-  composes: btn;
   color: white;
   background-color: var(--warningButtonBackgroundColor);
   border-color: var(--warningButtonBorderColor);
@@ -87,7 +95,6 @@
 }
 
 .btnDanger {
-  composes: btn;
   color: white;
   background-color: var(--dangerButtonBackgroundColor);
   border-color: var(--dangerButtonBorderColor);

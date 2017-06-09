@@ -3,6 +3,13 @@ import { storiesOf } from '@storybook/react';
 import { Card } from '../src';
 
 storiesOf('Card', module)
+  .add('with no width constraints', () => (
+    <Card>
+      <Card.Body>
+        <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+      </Card.Body>
+    </Card>
+  ))
   .add('with image, title, text, and button', () => (
     <Card width="300">
       <Card.Image/>

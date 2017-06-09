@@ -77,7 +77,14 @@ export class Card extends React.Component {
   static Header = CardHeader
   static Footer = CardFooter
   render() {
-    const { width, color, className, inverted, textAlign, ...other } = this.props;
+    const {
+      width,
+      color,
+      className,
+      inverted,
+      textAlign,
+      ...other
+    } = this.props;
     const classNames = [ styles.card ];
     const style = {};
 

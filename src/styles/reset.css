@@ -9,6 +9,7 @@ body {
   font-size: var(--baseFontSize);
   color: var(--baseFontColor);
   line-height: 1.5;
+  margin: 0;
 }
 
 *,

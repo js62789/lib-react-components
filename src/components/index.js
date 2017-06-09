@@ -8,3 +8,4 @@ export * from './Header';
 export * from './Text';
 export * from './Grid';
 export * from './Container';
+export * from './Jumbotron';
