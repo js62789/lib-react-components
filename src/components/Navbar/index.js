@@ -70,7 +70,7 @@ export class Navbar extends React.Component {
       styles.navbar,
     ];
 
-    switch (this.props.mobile) {
+    switch (this.props.toggleable) {
       case 'small':
         classNames.push(styles.navbarToggleableSmall);
         break;
@@ -80,8 +80,9 @@ export class Navbar extends React.Component {
       case 'large':
         classNames.push(styles.navbarToggleableLarge);
         break;
-      default:
+      case true:
         classNames.push(styles.navbarToggleable);
+        break;
     }
 
     if (this.props.inverted) {
@@ -96,7 +97,7 @@ export class Navbar extends React.Component {
       </nav>
     ) : (
       <nav className={classNames.join(' ')}>
-        <NavbarToggle onClick={this.toggleMenuVisibility} open={mobileMenuOpen} right />
+        { this.props.toggleable ? <NavbarToggle onClick={this.toggleMenuVisibility} open={mobileMenuOpen} right /> : null }
         { this.props.brand ? <NavbarBrand>{this.props.brand}</NavbarBrand> : null }
         <NavbarMenu open={mobileMenuOpen}>
           <NavbarNav>

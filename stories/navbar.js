@@ -8,7 +8,7 @@ const navItems = [{key: 'home', href: '#', content: 'Home'}, {key: 'link', href:
 
 storiesOf('Navbar', module)
   .add('with closed mobile menu', () => (
-    <Navbar>
+    <Navbar toggleable="large">
       <Navbar.Toggle />
       <Navbar.Menu>
         <Navbar.Brand href="#">Navbar</Navbar.Brand>
@@ -21,7 +21,7 @@ storiesOf('Navbar', module)
     </Navbar>
   ))
   .add('with open mobile menu', () => (
-    <Navbar>
+    <Navbar toggleable="large">
       <Navbar.Toggle open />
       <Navbar.Menu open>
         <Navbar.Brand href="#">Navbar</Navbar.Brand>
@@ -34,7 +34,7 @@ storiesOf('Navbar', module)
     </Navbar>
   ))
   .add('with right aligned toggle button', () => (
-    <Navbar mobile="large">
+    <Navbar toggleable="large">
       <Navbar.Toggle right />
       <Navbar.Brand href="#">Navbar</Navbar.Brand>
       <Navbar.Menu>
@@ -49,6 +49,7 @@ storiesOf('Navbar', module)
   ))
   .add('toggle at small', () => (
     <Navbar
+      toggleable="small"
       brand="Navbar"
       navItems={navItems}
       active="home"
@@ -56,7 +57,7 @@ storiesOf('Navbar', module)
   ))
   .add('toggle at medium', () => (
     <Navbar
-      mobile="medium"
+      toggleable="medium"
       brand="Navbar"
       navItems={navItems}
       active="home"
@@ -64,7 +65,7 @@ storiesOf('Navbar', module)
   ))
   .add('toggle at large', () => (
     <Navbar
-      mobile="large"
+      toggleable="large"
       brand="Navbar"
       navItems={navItems}
       active="home"
@@ -76,5 +77,6 @@ storiesOf('Navbar', module)
       navItems={navItems}
       active="home"
       inverted
+      toggleable
     />
   ));

@@ -14,7 +14,7 @@ import {
 storiesOf('Layouts', module)
   .add('home page', () => (
     <div>
-      <Navbar mobile="medium" inverted>
+      <Navbar toggleable="medium" inverted>
         <Navbar.Toggle right />
         <Navbar.Container>
           <Navbar.Brand href="#">Navbar</Navbar.Brand>
