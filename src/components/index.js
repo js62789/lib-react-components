@@ -9,3 +9,4 @@ export * from './Text';
 export * from './Grid';
 export * from './Container';
 export * from './Jumbotron';
+export * from './Navbar';
