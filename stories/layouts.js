@@ -36,7 +36,7 @@ storiesOf('Layouts', module)
       </Jumbotron>
       <Grid as={Container}>
         <Grid.Row>
-          <Grid.Column>
+          <Grid.Column medium="4">
             <Card>
               <Card.Body>
                 <Card.Title>Heading</Card.Title>
@@ -45,7 +45,7 @@ storiesOf('Layouts', module)
               </Card.Body>
             </Card>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column medium="4">
             <Card>
               <Card.Body>
                 <Card.Title>Heading</Card.Title>
@@ -54,7 +54,7 @@ storiesOf('Layouts', module)
               </Card.Body>
             </Card>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column medium="4">
             <Card>
               <Card.Body>
                 <Card.Title>Heading</Card.Title>
