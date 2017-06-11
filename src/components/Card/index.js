@@ -60,10 +60,10 @@ export class CardButton extends React.Component {
   }
 }
 
-export class CardBody extends React.Component {
+export class CardBlock extends React.Component {
   render() {
     return (
-      <div className={styles.cardBody}>{this.props.children}</div>
+      <div className={styles.cardBlock}>{this.props.children}</div>
     );
   }
 }
@@ -73,7 +73,7 @@ export class Card extends React.Component {
   static Title = CardTitle
   static Text = CardText
   static Button = CardButton
-  static Body = CardBody
+  static Block = CardBlock
   static Header = CardHeader
   static Footer = CardFooter
   render() {
@@ -115,13 +115,13 @@ export class Card extends React.Component {
     }
 
     if (inverted) {
-      classNames.push(styles.cardInverted);
+      classNames.push(styles.cardInverse);
     }
 
     if (textAlign === 'center') {
-      classNames.push(styles.cardCenterAligned);
+      classNames.push(styles.textCenter);
     } else if (textAlign === 'right') {
-      classNames.push(styles.cardRightAligned);
+      classNames.push(styles.textRight);
     }
 
     return (

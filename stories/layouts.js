@@ -38,29 +38,29 @@ storiesOf('Layouts', module)
         <Grid.Row>
           <Grid.Column medium="4">
             <Card>
-              <Card.Body>
+              <Card.Block>
                 <Card.Title>Heading</Card.Title>
                 <Card.Text>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</Card.Text>
                 <Card.Button>View Details »</Card.Button>
-              </Card.Body>
+              </Card.Block>
             </Card>
           </Grid.Column>
           <Grid.Column medium="4">
             <Card>
-              <Card.Body>
+              <Card.Block>
                 <Card.Title>Heading</Card.Title>
                 <Card.Text>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</Card.Text>
                 <Card.Button>View Details »</Card.Button>
-              </Card.Body>
+              </Card.Block>
             </Card>
           </Grid.Column>
           <Grid.Column medium="4">
             <Card>
-              <Card.Body>
+              <Card.Block>
                 <Card.Title>Heading</Card.Title>
                 <Card.Text>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</Card.Text>
                 <Card.Button>View Details »</Card.Button>
-              </Card.Body>
+              </Card.Block>
             </Card>
           </Grid.Column>
         </Grid.Row>
