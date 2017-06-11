@@ -5,6 +5,12 @@
   margin-bottom: 3.2rem;
   background-color: #eceeef;
   border-radius: .3rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.jumbotronInverse {
+  color: #fff;
 }
 
 @media (--small-viewport) {

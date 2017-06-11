@@ -27,7 +27,7 @@ storiesOf('Layouts', module)
           </Navbar.Menu>
         </Navbar.Container>
       </Navbar>
-      <Jumbotron>
+      <Jumbotron backgroundImage="https://i.redd.it/fwnspszr9w2z.jpg" inverted>
         <Container>
           <Header as="h1">Welcome</Header>
           <Text>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</Text>
