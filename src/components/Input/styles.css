@@ -1,5 +1,4 @@
 @import '../../styles/variables.css';
-@import '../../styles/reset.css';
 
 .textInput {
   composes: formControl from '../../styles/forms.css';
