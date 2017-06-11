@@ -30,4 +30,6 @@
   --warningButtonBorderColor: var(--warningColor);
   --dangerButtonBackgroundColor: var(--dangerColor);
   --dangerButtonBorderColor: var(--dangerColor);
+  --gridColumns: 12;
+  --gridGutter: 3rem;
 }
