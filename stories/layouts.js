@@ -8,11 +8,25 @@ import {
   Card,
   Text,
   Button,
+  Navbar
 } from '../src';
 
 storiesOf('Layouts', module)
   .add('home page', () => (
     <div>
+      <Navbar toggleable="medium" inverted>
+        <Navbar.Toggle right />
+        <Navbar.Container>
+          <Navbar.Brand href="#">Navbar</Navbar.Brand>
+          <Navbar.Menu>
+            <Navbar.Nav>
+              <Navbar.NavItem href="#" active>Home</Navbar.NavItem>
+              <Navbar.NavItem href="#">Link</Navbar.NavItem>
+              <Navbar.NavItem href="#" disabled>Disabled</Navbar.NavItem>
+            </Navbar.Nav>
+          </Navbar.Menu>
+        </Navbar.Container>
+      </Navbar>
       <Jumbotron>
         <Container>
           <Header as="h1">Welcome</Header>
