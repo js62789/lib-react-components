@@ -14,10 +14,12 @@
   --baseBorderWidth: 0.1rem;
   --baseBorderColor: #bbb;
   --baseBorderRadius: 0.4rem;
+  --basePaddingVertical: 0.8rem;
+  --basePaddingHorizontal: 1.6rem;
   --formControlLineHeight: 1.25;
   --formControlFocusBorderColor: #66afe9;
-  --formControlPaddingVertical: 0.8rem;
-  --formControlPaddingHorizontal: 1.6rem;
+  --formControlPaddingVertical: var(--basePaddingVertical);
+  --formControlPaddingHorizontal: var(--basePaddingHorizontal);
   --defaultButtonBackgroundColor: white;
   --defaultButtonBorderColor: var(--baseBorderColor);
   --primaryButtonBackgroundColor: var(--primaryColor);

@@ -10,3 +10,4 @@ export * from './Grid';
 export * from './Container';
 export * from './Jumbotron';
 export * from './Navbar';
+export * from './Nav';

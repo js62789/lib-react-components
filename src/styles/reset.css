@@ -27,3 +27,13 @@ a {
 dl, ol, ul {
   margin-top: 0;
 }
+
+a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #014c8c;
+  text-decoration: underline;
+}

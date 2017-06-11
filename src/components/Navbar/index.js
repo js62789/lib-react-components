@@ -3,6 +3,7 @@ import {
   Input,
   Button,
   Container,
+  Nav,
 } from '../';
 import styles from './styles.css';
 
@@ -10,21 +11,16 @@ export const NavbarBrand = ({ children, href }) => (
   <a className={styles.navbarBrand} href={href | '#'}>{children}</a>
 )
 
-export const NavbarNavItem = ({ active, href, disabled, content, children }) => (
-  <li className={`${styles.navItem} ${active ? styles.active : ''}`}>
-    <a
-      className={`${styles.navLink} ${disabled ? styles.disabled : ''}`}
-      href={href || '#'}
-    >
-      {active ? <span className={styles.screenReader}>(current)</span> : null}{content || children}
-    </a>
-  </li>
+export const NavbarNavItem = ({ active, ...other }) => (
+  <Nav.Item>
+    <Nav.Link className={`${styles.navLink} ${active ? styles.active : ''}`} {...other} />
+  </Nav.Item>
 )
 
 export const NavbarNav = ({ children }) => (
-  <ul className={styles.navbarNav}>
+  <Nav className={styles.navbarNav}>
     {children}
-  </ul>
+  </Nav>
 )
 
 export const NavbarMenu = ({ children, open }) => (

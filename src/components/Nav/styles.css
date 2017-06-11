@@ -1,0 +1,132 @@
+@import '../../styles/variables.css';
+
+.nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navLink {
+  display: block;
+  padding: var(--basePaddingVertical) var(--basePaddingHorizontal);
+}
+
+.navLink:focus,
+.navLink:hover {
+  text-decoration: none;
+}
+
+.navLink.disabled {
+  color: #636c72;
+  cursor: not-allowed;
+}
+
+.navTabs {
+  border-bottom: 1px solid #ddd;
+}
+
+.navTabs .navItem {
+  margin-bottom: -1px;
+}
+
+.navTabs .navLink {
+  border: 1px solid transparent;
+  border-top-right-radius: var(--baseBorderRadius);
+  border-top-left-radius: var(--baseBorderRadius);
+}
+
+.navTabs .navLink:focus,
+.navTabs .navLink:hover {
+  border-color: #eceeef #eceeef #ddd;
+}
+
+.navTabs .navLink.disabled {
+  color: #636c72;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navTabs .navLink.active,
+.navTabs .navItem.show .navLink {
+  color: #464a4c;
+  background-color: #fff;
+  border-color: #ddd #ddd #fff;
+}
+
+.navTabs .dropdownMenu {
+  margin-top: -1px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.navPills .navLink {
+  border-radius: var(--baseBorderRadius);
+}
+
+.navPills .navLink.active,
+.navPills .navItem.show .navLink {
+  color: #fff;
+  cursor: default;
+  background-color: var(--primaryColor);
+}
+
+.navFill .navItem {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: center;
+}
+
+.navJustified .navItem {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-align: center;
+}
+
+.tabContent > .tabPane {
+  display: none;
+}
+
+.tabContent > .active {
+  display: block;
+}
+
+.flexColumn {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+.justifyContentEnd {
+  -webkit-box-pack: end !important;
+  -webkit-justify-content: flex-end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
+}
+
+.justifyContentCenter {
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.screenReader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
