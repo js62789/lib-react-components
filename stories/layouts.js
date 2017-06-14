@@ -8,7 +8,9 @@ import {
   Card,
   Text,
   Button,
-  Navbar
+  Navbar,
+  ListGroup,
+  Flex
 } from '../src';
 
 storiesOf('Layouts', module)
@@ -66,4 +68,37 @@ storiesOf('Layouts', module)
         </Grid.Row>
       </Grid>
     </div>
+  ))
+  .add('latest news', () => (
+    <Container>
+      <Navbar toggleable="medium" inverted>
+        <Navbar.Toggle right />
+        <Navbar.Container>
+          <Navbar.Brand href="#">Navbar</Navbar.Brand>
+          <Navbar.Menu>
+            <Navbar.Nav>
+              <Navbar.NavItem href="#" active>Home</Navbar.NavItem>
+              <Navbar.NavItem href="#">Top Stories</Navbar.NavItem>
+            </Navbar.Nav>
+          </Navbar.Menu>
+        </Navbar.Container>
+      </Navbar>
+      <Header>Top Stories</Header>
+      <ListGroup as="div">
+        <ListGroup.Item as="a" href="#" action>
+          <Flex justifyContent="between">
+            <Header as="h2">News Story Title</Header>
+            <Text muted small>3 hours ago</Text>
+          </Flex>
+          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+        </ListGroup.Item>
+        <ListGroup.Item as="a" href="#" action>
+          <Flex justifyContent="between">
+            <Header as="h2">News Story Title</Header>
+            <Text muted small>3 hours ago</Text>
+          </Flex>
+          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+        </ListGroup.Item>
+      </ListGroup>
+    </Container>
   ));
