@@ -11,21 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@storybook/react": "^3.0.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-env": "^1.5.1",
-    "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^2.1.0",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
-    "postcss-loader": "^2.0.5",
-    "react-dom": "^15.5.4",
-    "style-loader": "^0.18.2",
-    "webpack": "^2.6.1"
-  },
-  "dependencies": {
-    "react": "^15.5.4"
+    "postcss-loader": "^2.0.5"
   }
 }
