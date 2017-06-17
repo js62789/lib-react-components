@@ -32,6 +32,7 @@ export class NavLink extends React.Component {
       <Element
         className={classNames.join(' ')}
         href={href}
+        {...other}
       >
         {active ? <span className={styles.screenReader}>(current)</span> : null}
         {content || children}
