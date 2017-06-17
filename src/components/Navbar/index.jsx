@@ -11,9 +11,13 @@ export const NavbarBrand = ({ children, href }) => (
   <a className={styles.navbarBrand} href={href | '#'}>{children}</a>
 )
 
-export const NavbarNavItem = ({ active, ...other }) => (
+export const NavbarNavLink = ({ active, ...other }) => (
+  <Nav.Link className={`${styles.navLink} ${active ? styles.active : ''}`} {...other} />
+)
+
+export const NavbarNavItem = (args) => (
   <Nav.Item>
-    <Nav.Link className={`${styles.navLink} ${active ? styles.active : ''}`} {...other} />
+    <NavbarNavLink {...args} />
   </Nav.Item>
 )
 
@@ -51,6 +55,7 @@ export class Navbar extends React.Component {
   static Menu = NavbarMenu
   static Nav = NavbarNav
   static NavItem = NavbarNavItem
+  static NavLink = NavbarNavLink
   static Toggle = NavbarToggle
   static Container = NavbarContainer
 
