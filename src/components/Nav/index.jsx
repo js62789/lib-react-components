@@ -10,8 +10,10 @@ export class NavLink extends React.Component {
       active,
       disabled,
       href,
+      as,
       ...other
     } = this.props;
+    const Element = as || 'a';
     const classNames = [ styles.navLink ];
 
     if (active) {
@@ -27,13 +29,13 @@ export class NavLink extends React.Component {
     }
 
     return (
-      <a
+      <Element
         className={classNames.join(' ')}
         href={href}
       >
         {active ? <span className={styles.screenReader}>(current)</span> : null}
         {content || children}
-      </a>
+      </Element>
     );
   }
 }
