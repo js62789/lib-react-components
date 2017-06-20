@@ -22,6 +22,8 @@ export class Image extends React.Component {
   render() {
     const { width, height, rounded, bordered } = this.props;
     const classNames = [ styles.image ];
+    const inlineStyles = this.props.style || {};
+
     const src = this.props.src || this.generateSrcPlaceholder({
       width: width,
       height: height,
@@ -38,8 +40,16 @@ export class Image extends React.Component {
       classNames.push(styles.imageBordered);
     }
 
+    if (height) {
+      inlineStyles.height = height;
+    }
+
+    if (width) {
+      inlineStyles.width = width;
+    }
+
     return (
-      <img className={classNames.join(' ')} src={src} />
+      <img className={classNames.join(' ')} style={inlineStyles} src={src} />
     );
   }
 }
