@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.css';
+import Loader from '../Loader';
 
 export class ListGroupItem extends React.Component {
   render() {
@@ -53,11 +54,13 @@ export class ListGroupItem extends React.Component {
 export class ListGroup extends React.Component {
   static Item = ListGroupItem
   render() {
-    const { as, ...other } = this.props;
+    const { as, loading, children, ...other } = this.props;
     const Element = as || 'ul';
 
     return (
-      <Element className={styles.listGroup} {...other} />
+      <Element className={styles.listGroup} {...other}>
+        { loading ? <Loader /> : children }
+      </Element>
     );
   }
 }

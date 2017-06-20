@@ -26,6 +26,9 @@ storiesOf('ListGroup', module)
       <ListGroup.Item color="danger"> color="primary"List Item</ListGroup.Item>
     </ListGroup>
   ))
+  .add('loading', () => (
+    <ListGroup loading></ListGroup>
+  ))
   .add('with various content', () => (
     <ListGroup as="div">
       <ListGroup.Item as="a" href="#" action>
