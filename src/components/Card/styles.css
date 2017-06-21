@@ -204,7 +204,7 @@
   border-radius: calc(0.25rem - 1px);
 }
 
-.cardImg-overlay {
+.cardImgOverlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -213,12 +213,12 @@
   padding: 1.25rem;
 }
 
-.cardImg-top {
+.cardImgTop {
   border-top-right-radius: calc(0.25rem - 1px);
   border-top-left-radius: calc(0.25rem - 1px);
 }
 
-.cardImg-bottom {
+.cardImgBottom {
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
@@ -280,27 +280,27 @@
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }
-  .cardGroup .card:first-child .cardImg-top {
+  .cardGroup .card:first-child .cardImgTop {
     border-top-right-radius: 0;
   }
-  .cardGroup .card:first-child .cardImg-bottom {
+  .cardGroup .card:first-child .cardImgBottom {
     border-bottom-right-radius: 0;
   }
   .cardGroup .card:last-child {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
   }
-  .cardGroup .card:last-child .cardImg-top {
+  .cardGroup .card:last-child .cardImgTop {
     border-top-left-radius: 0;
   }
-  .cardGroup .card:last-child .cardImg-bottom {
+  .cardGroup .card:last-child .cardImgBottom {
     border-bottom-left-radius: 0;
   }
   .cardGroup .card:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
-  .cardGroup .card:not(:first-child):not(:last-child) .cardImg-top,
-  .cardGroup .card:not(:first-child):not(:last-child) .cardImg-bottom {
+  .cardGroup .card:not(:first-child):not(:last-child) .cardImgTop,
+  .cardGroup .card:not(:first-child):not(:last-child) .cardImgBottom {
     border-radius: 0;
   }
 }

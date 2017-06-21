@@ -10,9 +10,17 @@ storiesOf('Card', module)
       </Card.Block>
     </Card>
   ))
+  .add('with an image overlay', () => (
+    <Card width={300}>
+      <Card.Image width={300} height={100}/>
+      <Card.ImageOverlay>
+        <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+      </Card.ImageOverlay>
+    </Card>
+  ))
   .add('with image, title, text, and button', () => (
     <Card width="300">
-      <Card.Image/>
+      <Card.Image width={300} height={100}/>
       <Card.Block>
         <Card.Title>Card title</Card.Title>
         <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>

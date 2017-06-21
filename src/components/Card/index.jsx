@@ -26,7 +26,15 @@ export class CardDeck extends React.Component {
 export class CardImage extends React.Component {
   render() {
     return (
-      <Image className={styles.cardImage} {...this.props} />
+      <Image className={styles.cardImg} {...this.props} />
+    );
+  }
+}
+
+export class CardImageOverlay extends React.Component {
+  render() {
+    return (
+      <div className={styles.cardImgOverlay} {...this.props} />
     );
   }
 }
@@ -86,6 +94,7 @@ export class CardBlock extends React.Component {
 
 export class Card extends React.Component {
   static Image = CardImage
+  static ImageOverlay = CardImageOverlay
   static Title = CardTitle
   static Text = CardText
   static Button = CardButton
