@@ -7,6 +7,14 @@ import {
 } from '../';
 import styles from './styles.css';
 
+export class CardColumns extends React.Component {
+  render() {
+    return (
+      <div className={styles.cardColumns} {...this.props} />
+    );
+  }
+}
+
 export class CardDeck extends React.Component {
   render() {
     return (
@@ -85,6 +93,7 @@ export class Card extends React.Component {
   static Header = CardHeader
   static Footer = CardFooter
   static Deck = CardDeck
+  static Columns = CardColumns
   render() {
     const {
       width,

@@ -161,6 +161,42 @@ storiesOf('Card', module)
         <Card.Block>
           <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
         </Card.Block>
-    </Card>
+      </Card>
     </Card.Deck>
+  ))
+  .add('in columns', () => (
+    <Card.Columns>
+      <Card>
+        <Card.Block>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+      <Card>
+        <Card.Block>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+      <Card>
+        <Card.Block>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+      <Card>
+        <Card.Block>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+      <Card>
+        <Card.Block>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+      <Card>
+        <Card.Block>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+    </Card.Columns>
   ));
