@@ -144,4 +144,23 @@ storiesOf('Card', module)
         </Card.Block>
       </Card>
     </div>
+  ))
+  .add('in a deck', () => (
+    <Card.Deck>
+      <Card>
+        <Card.Block>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+      <Card>
+        <Card.Block>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+      </Card>
+      <Card>
+        <Card.Block>
+          <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+        </Card.Block>
+    </Card>
+    </Card.Deck>
   ));

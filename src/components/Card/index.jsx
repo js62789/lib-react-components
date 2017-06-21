@@ -7,6 +7,14 @@ import {
 } from '../';
 import styles from './styles.css';
 
+export class CardDeck extends React.Component {
+  render() {
+    return (
+      <div className={styles.cardDeck} {...this.props} />
+    );
+  }
+}
+
 export class CardImage extends React.Component {
   render() {
     return (
@@ -76,6 +84,7 @@ export class Card extends React.Component {
   static Block = CardBlock
   static Header = CardHeader
   static Footer = CardFooter
+  static Deck = CardDeck
   render() {
     const {
       width,
