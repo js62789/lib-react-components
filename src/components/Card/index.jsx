@@ -25,7 +25,21 @@ export class CardDeck extends React.Component {
 
 export class CardImage extends React.Component {
   render() {
-    const classNames = [styles.cardImg, styles.cardImgTop];
+    const { position, className } = this.props;
+    const classNames = [];
+
+    if (className) {
+      classNames.push(className);
+    }
+
+    if (position === 'top') {
+      classNames.push(styles.cardImgTop);
+    } else if (position === 'bottom') {
+      classNames.push(styles.cardImgBottom);
+    } else {
+      classNames.push(styles.cardImg);
+    }
+
     return (
       <Image className={classNames.join(' ')} {...this.props} />
     );
