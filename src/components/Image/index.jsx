@@ -55,8 +55,8 @@ export class Image extends React.Component {
 }
 
 Image.defaultProps = {
-  width: 400,
-  height: 200,
+  width: null,
+  height: null,
 };
 
 export default Image;
