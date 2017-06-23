@@ -20,7 +20,7 @@ export class Image extends React.Component {
   }
 
   render() {
-    const { width, height, rounded, bordered, className } = this.props;
+    const { width, height, rounded, bordered, className, alt } = this.props;
     const classNames = [ styles.image ];
     const inlineStyles = this.props.style || {};
 
@@ -53,7 +53,7 @@ export class Image extends React.Component {
     }
 
     return (
-      <img className={classNames.join(' ')} style={inlineStyles} src={src} />
+      <img className={classNames.join(' ')} style={inlineStyles} src={src} alt={alt} />
     );
   }
 }
