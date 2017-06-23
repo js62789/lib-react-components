@@ -95,6 +95,10 @@ export class Column  extends React.Component {
       classNames.push(styles.column);
     }
 
+    if (className) {
+      classNames.push(className);
+    }
+
     return (
       <Element className={classNames.join(' ')} {...other} />
     );
