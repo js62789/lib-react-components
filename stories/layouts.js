@@ -8,6 +8,7 @@ import {
   Card,
   Text,
   Button,
+  Nav,
   Navbar,
   ListGroup,
   Flex
@@ -101,4 +102,35 @@ storiesOf('Layouts', module)
         </ListGroup.Item>
       </ListGroup>
     </Container>
+  ))
+  .add('dashboard', () => (
+    <div>
+    <Navbar
+      toggleable="medium"
+      brand="Navbar"
+    />
+      <Grid container>
+        <Grid.Row>
+          <Grid.Column medium="3" style={{ backgroundColor: '#ddd', position: 'fixed', top: 54, bottom: 0, paddingLeft: 0, paddingRight: 0 }}>
+            <Nav type="pills" vertical>
+              <Nav.Item>
+                <Nav.Link style={{ borderRadius: 0 }} active>Link</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link style={{ borderRadius: 0 }}>Link</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link style={{ borderRadius: 0 }}>Link</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link style={{ borderRadius: 0 }}>Link</Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Grid.Column>
+          <Grid.Column mediumOffset="3">
+            Main Content
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </div>
   ));
