@@ -47,6 +47,15 @@ storiesOf('Navbar', module)
       </Navbar.Menu>
     </Navbar>
   ))
+  .add('fixed to the top', () => (
+    <Navbar
+      toggleable="small"
+      brand="Navbar"
+      navItems={navItems}
+      active="home"
+      fixed
+    />
+  ))
   .add('toggle at small', () => (
     <Navbar
       toggleable="small"

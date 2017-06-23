@@ -66,12 +66,25 @@ export class Navbar extends React.Component {
   toggleMenuVisibility = () => this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen })
 
   render() {
+    const {
+      toggleable,
+      inverted,
+      fixed,
+      brand,
+      navItems,
+      active,
+      children
+    } = this.props;
     const { mobileMenuOpen } = this.state;
     const classNames = [
       styles.navbar,
     ];
 
-    switch (this.props.toggleable) {
+    if (fixed) {
+      classNames.push(styles.fixedTop);
+    }
+
+    switch (toggleable) {
       case 'small':
         classNames.push(styles.navbarToggleableSmall);
         break;
@@ -86,23 +99,23 @@ export class Navbar extends React.Component {
         break;
     }
 
-    if (this.props.inverted) {
+    if (inverted) {
       classNames.push(styles.navbarInverse);
     } else {
       classNames.push(styles.navbarLight);
     }
 
-    return this.props.children ? (
+    return children ? (
       <nav className={classNames.join(' ')}>
-        {this.props.children}
+        {children}
       </nav>
     ) : (
       <nav className={classNames.join(' ')}>
-        { this.props.toggleable ? <NavbarToggle onClick={this.toggleMenuVisibility} open={mobileMenuOpen} right /> : null }
-        { this.props.brand ? <NavbarBrand>{this.props.brand}</NavbarBrand> : null }
+        { toggleable ? <NavbarToggle onClick={this.toggleMenuVisibility} open={mobileMenuOpen} right /> : null }
+        { brand ? <NavbarBrand>{brand}</NavbarBrand> : null }
         <NavbarMenu open={mobileMenuOpen}>
           <NavbarNav>
-            {this.props.navItems.map(item => <NavbarNavItem {...item} active={item.key === this.props.active} />)}
+            {navItems.map(item => <NavbarNavItem {...item} active={item.key === active} />)}
           </NavbarNav>
         </NavbarMenu>
       </nav>
