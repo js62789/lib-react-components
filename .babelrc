@@ -11,7 +11,18 @@
   ],
   "plugins": [
     "transform-object-rest-spread",
-    ["transform-class-properties", { "spec": true }],
-    "transform-postcss"
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ],
+    [
+      "css-modules-transform",
+      {
+        "generateScopedName": "[name]__[local]___[hash:base64:5]",
+        "extractCss": "build/styles.css"
+      }
+    ]
   ]
 }
