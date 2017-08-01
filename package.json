@@ -2,8 +2,11 @@
   "name": "lib-react-components",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "NODE_ENV=production babel -d build/ src/",
+    "build:css": "postcss \"src/**/*.css\" -d build/ -o build/styles.css",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +14,19 @@
   "license": "ISC",
   "devDependencies": {
     "@storybook/react": "^3.0.1",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-postcss": "^0.2.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "postcss": "^6.0.8",
+    "postcss-cli": "^4.1.0",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
-    "postcss-loader": "^2.0.5",
-    "react-dom": "^15.6.1"
+    "postcss-modules": "^0.8.0"
+  },
+  "dependencies": {
+    "react": "^15.6.1"
   }
 }

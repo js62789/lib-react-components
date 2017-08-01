@@ -1,0 +1,17 @@
+{
+  "sourceMaps": "inline",
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["> 2% in US"],
+        "node": "current"
+      }
+    }],
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    ["transform-class-properties", { "spec": true }],
+    "transform-postcss"
+  ]
+}
