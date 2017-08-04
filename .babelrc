@@ -1,12 +1,15 @@
 {
   "sourceMaps": "inline",
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["> 2% in US"],
-        "node": "current"
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["> 2% in US"],
+          "node": "current"
+        }
       }
-    }],
+    ],
     "react"
   ],
   "plugins": [
@@ -15,13 +18,6 @@
       "transform-class-properties",
       {
         "spec": true
-      }
-    ],
-    [
-      "css-modules-transform",
-      {
-        "generateScopedName": "[name]__[local]___[hash:base64:5]",
-        "extractCss": "build/styles.css"
       }
     ]
   ]

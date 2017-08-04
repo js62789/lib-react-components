@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.css';
 
 export class Container extends React.Component {
   render() {
@@ -12,9 +11,9 @@ export class Container extends React.Component {
     }
 
     if (fluid) {
-      classNames.push(styles.containerFluid);
+      classNames.push('container-fluid');
     } else {
-      classNames.push(styles.container);
+      classNames.push('container');
     }
 
     return (

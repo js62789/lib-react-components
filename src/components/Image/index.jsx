@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../Button';
-import styles from './styles.css';
 
 export class Image extends React.Component {
   calculateScaledFontSize(width, height) {
@@ -21,7 +20,7 @@ export class Image extends React.Component {
 
   render() {
     const { width, height, rounded, bordered, className, alt } = this.props;
-    const classNames = [ styles.image ];
+    const classNames = [ 'image' ];
     const inlineStyles = this.props.style || {};
 
     const src = this.props.src || this.generateSrcPlaceholder({
@@ -37,11 +36,11 @@ export class Image extends React.Component {
     }
 
     if (rounded) {
-      classNames.push(styles.imageRounded);
+      classNames.push('rounded');
     }
 
     if (bordered) {
-      classNames.push(styles.imageBordered);
+      classNames.push('img-thumbnail');
     }
 
     if (height) {

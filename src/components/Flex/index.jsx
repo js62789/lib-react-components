@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.css';
 
 export class FlexItem extends React.Component {
   render() {
@@ -17,67 +16,67 @@ export class Flex extends React.Component {
       alignContent,
       direction,
       ...other } = this.props;
-    const classNames = [ styles.dFlex, styles.w100 ];
+    const classNames = [ 'd-flex', 'w-100' ];
 
     switch (justifyContent) {
       case 'start':
-        classNames.push(styles.justifyContentStart);
+        classNames.push('justify-content-start');
         break;
       case 'end':
-        classNames.push(styles.justifyContentEnd);
+        classNames.push('justify-content-end');
         break;
       case 'center':
-        classNames.push(styles.justifyContentCenter);
+        classNames.push('justify-content-center');
         break;
       case 'between':
-        classNames.push(styles.justifyContentBetween);
+        classNames.push('justify-content-between');
         break;
       case 'around':
-        classNames.push(styles.justifyContentAround);
+        classNames.push('justify-content-around');
         break;
     }
 
     switch (alignItems) {
       case 'start':
-        classNames.push(styles.alignItemsStart);
+        classNames.push('align-items-start');
         break;
       case 'end':
-        classNames.push(styles.alignItemsEnd);
+        classNames.push('align-items-end');
         break;
       case 'center':
-        classNames.push(styles.alignItemsCenter);
+        classNames.push('align-items-center');
         break;
       case 'baseline':
-        classNames.push(styles.alignItemsBaseline);
+        classNames.push('align-items-baseline');
         break;
       case 'stretch':
-        classNames.push(styles.alignItemsStretch);
+        classNames.push('align-items-stretch');
         break;
     }
 
     switch (alignContent) {
       case 'start':
-        classNames.push(styles.alignContentStart);
+        classNames.push('align-content-start');
         break;
       case 'end':
-        classNames.push(styles.alignContentEnd);
+        classNames.push('align-content-end');
         break;
       case 'center':
-        classNames.push(styles.alignContentCenter);
+        classNames.push('align-content-center');
         break;
       case 'between':
-        classNames.push(styles.alignContentBetween);
+        classNames.push('align-content-between');
         break;
       case 'around':
-        classNames.push(styles.alignContentAround);
+        classNames.push('align-content-around');
         break;
       case 'stretch':
-        classNames.push(styles.alignContentAround);
+        classNames.push('align-content-stretch');
         break;
     }
 
     if (direction === 'column') {
-      classNames.push(styles.flexColumn);
+      classNames.push('flex-column');
     }
 
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.css';
 import Loader from '../Loader';
 
 export class ListGroupItem extends React.Component {
@@ -13,35 +12,35 @@ export class ListGroupItem extends React.Component {
       ...other
     } = this.props;
     const Element = as || 'li';
-    const classNames = [ styles.listGroupItem ];
+    const classNames = [ 'list-group-item' ];
 
     if (active) {
-      classNames.push(styles.active);
+      classNames.push('active');
     }
 
     if (disabled) {
-      classNames.push(styles.disabled);
+      classNames.push('disabled');
     }
 
     if (action) {
-      classNames.push(styles.listGroupItemAction);
+      classNames.push('list-group-item-action');
     }
 
     switch (color) {
       case 'primary':
-        classNames.push(styles.listGroupItemPrimary);
+        classNames.push('list-group-item-primary');
         break;
       case 'info':
-        classNames.push(styles.listGroupItemInfo);
+        classNames.push('list-group-item-info');
         break;
       case 'success':
-        classNames.push(styles.listGroupItemSuccess);
+        classNames.push('list-group-item-success');
         break;
       case 'warning':
-        classNames.push(styles.listGroupItemWarning);
+        classNames.push('list-group-item-warning');
         break;
       case 'danger':
-        classNames.push(styles.listGroupItemDanger);
+        classNames.push('list-group-item-danger');
         break;
     }
 
@@ -58,8 +57,8 @@ export class ListGroup extends React.Component {
     const Element = as || 'ul';
 
     return (
-      <Element className={styles.listGroup} {...other}>
-        { loading ? <Loader /> : children }
+      <Element className="list-group" {...other}>
+        { children }
       </Element>
     );
   }

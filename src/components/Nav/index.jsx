@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.css';
 
 export class NavLink extends React.Component {
   render() {
@@ -14,14 +13,14 @@ export class NavLink extends React.Component {
       ...other
     } = this.props;
     const Element = as || 'a';
-    const classNames = [ styles.navLink ];
+    const classNames = [ 'nav-link' ];
 
     if (active) {
-      classNames.push(styles.active);
+      classNames.push('active');
     }
 
     if (disabled) {
-      classNames.push(styles.disabled);
+      classNames.push('disabled');
     }
 
     if (className) {
@@ -31,10 +30,10 @@ export class NavLink extends React.Component {
     return (
       <Element
         className={classNames.join(' ')}
-        href={href}
+        href={href || '#'}
         {...other}
       >
-        {active ? <span className={styles.screenReader}>(current)</span> : null}
+        {active ? <span className="sr-only">(current)</span> : null}
         {content || children}
       </Element>
     );
@@ -44,7 +43,7 @@ export class NavLink extends React.Component {
 export class NavItem extends React.Component {
   render() {
     const { className, ...other } = this.props;
-    const classNames = [ styles.navItem ];
+    const classNames = [ 'nav-item' ];
 
     if (className) {
       classNames.push(className);
@@ -68,28 +67,28 @@ export class Nav extends React.Component {
       type,
       ...other
     } = this.props;
-    const classNames = [ styles.nav ];
+    const classNames = [ 'nav' ];
     const Element = as || 'ul';
     const style = {};
 
     if (type === 'pills') {
-      classNames.push(styles.navPills);
+      classNames.push('nav-pills');
     } else if (type === 'tabs') {
-      classNames.push(styles.navTabs);
+      classNames.push('nav-tabs');
     }
 
     if (vertical) {
-      classNames.push(styles.flexColumn);
+      classNames.push('flex-column');
     }
 
     if (justified) {
-      classNames.push(styles.navJustified);
+      classNames.push('nav-justified');
     }
 
     if (align === 'center') {
-      classNames.push(styles.justifyContentCenter);
+      classNames.push('justify-content-center');
     } else if (align === 'right') {
-      classNames.push(styles.justifyContentEnd);
+      classNames.push('justify-content-end');
     }
 
     return (

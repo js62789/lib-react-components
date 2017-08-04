@@ -83,6 +83,7 @@ storiesOf('Navbar', module)
   .add('inverted', () => (
     <Navbar
       brand="Navbar"
+      className="bg-inverse"
       navItems={navItems}
       active="home"
       inverted

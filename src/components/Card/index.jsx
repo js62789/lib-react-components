@@ -5,12 +5,11 @@ import {
   Header,
   Text,
 } from '../';
-import styles from './styles.css';
 
 export class CardColumns extends React.Component {
   render() {
     return (
-      <div className={styles.cardColumns} {...this.props} />
+      <div className="card-columns" {...this.props} />
     );
   }
 }
@@ -18,7 +17,7 @@ export class CardColumns extends React.Component {
 export class CardDeck extends React.Component {
   render() {
     return (
-      <div className={styles.cardDeck} {...this.props} />
+      <div className="card-deck" {...this.props} />
     );
   }
 }
@@ -33,11 +32,11 @@ export class CardImage extends React.Component {
     }
 
     if (position === 'top') {
-      classNames.push(styles.cardImgTop);
+      classNames.push('card-img-top');
     } else if (position === 'bottom') {
-      classNames.push(styles.cardImgBottom);
+      classNames.push('card-img-bottom');
     } else {
-      classNames.push(styles.cardImg);
+      classNames.push('card-img');
     }
 
     return (
@@ -49,7 +48,7 @@ export class CardImage extends React.Component {
 export class CardImageOverlay extends React.Component {
   render() {
     return (
-      <div className={styles.cardImgOverlay} {...this.props} />
+      <div className="card-img-overlay" {...this.props} />
     );
   }
 }
@@ -57,7 +56,7 @@ export class CardImageOverlay extends React.Component {
 export class CardHeader extends React.Component {
   render() {
     return (
-      <CardText className={styles.cardHeader} {...this.props} />
+      <CardText className="card-header" {...this.props} />
     );
   }
 }
@@ -65,7 +64,7 @@ export class CardHeader extends React.Component {
 export class CardFooter extends React.Component {
   render() {
     return (
-      <CardText className={styles.cardFooter} {...this.props} />
+      <CardText className="card-footer" {...this.props} />
     );
   }
 }
@@ -73,7 +72,7 @@ export class CardFooter extends React.Component {
 export class CardTitle extends React.Component {
   render() {
     return (
-      <Header as="h4" className={styles.cardTitle} {...this.props} />
+      <Header as="h4" className="card-title" {...this.props} />
     );
   }
 }
@@ -81,7 +80,7 @@ export class CardTitle extends React.Component {
 export class CardText extends React.Component {
   render() {
     const { className, ...other } = this.props;
-    const classNames = [ styles.cardText ];
+    const classNames = [ 'card-text' ];
     if (className) {
       classNames.push(className);
     }
@@ -102,7 +101,7 @@ export class CardButton extends React.Component {
 export class CardBlock extends React.Component {
   render() {
     return (
-      <div className={styles.cardBlock}>{this.props.children}</div>
+      <div className="card-block">{this.props.children}</div>
     );
   }
 }
@@ -127,7 +126,7 @@ export class Card extends React.Component {
       textAlign,
       ...other
     } = this.props;
-    const classNames = [ styles.card ];
+    const classNames = [ 'card' ];
     const style = {};
 
     if (className) {
@@ -138,32 +137,18 @@ export class Card extends React.Component {
       style.width = width;
     }
 
-    switch (this.props.color) {
-      case 'primary':
-        classNames.push(styles.cardPrimary);
-        break;
-      case 'info':
-        classNames.push(styles.cardInfo);
-        break;
-      case 'success':
-        classNames.push(styles.cardSuccess);
-        break;
-      case 'warning':
-        classNames.push(styles.cardWarning);
-        break;
-      case 'danger':
-        classNames.push(styles.cardDanger);
-        break;
+    if (color) {
+      classNames.push(`card-${color}`);
     }
 
     if (inverted) {
-      classNames.push(styles.cardInverse);
+      classNames.push('card-inverse');
     }
 
     if (textAlign === 'center') {
-      classNames.push(styles.textCenter);
+      classNames.push('text-center');
     } else if (textAlign === 'right') {
-      classNames.push(styles.textRight);
+      classNames.push('text-right');
     }
 
     return (

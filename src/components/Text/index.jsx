@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from './styles.css';
 
 export class Text extends React.Component {
   render() {
-    const classNames = [ styles.text ];
+    const classNames = [ 'text' ];
     const {
       className,
       color,
@@ -21,48 +20,48 @@ export class Text extends React.Component {
 
     switch (color) {
       case 'primary':
-        classNames.push(styles.textPrimary);
+        classNames.push('text-primary');
         break;
       case 'info':
-        classNames.push(styles.textInfo);
+        classNames.push('text-info');
         break;
       case 'success':
-        classNames.push(styles.textSuccess);
+        classNames.push('text-success');
         break;
       case 'warning':
-        classNames.push(styles.textWarning);
+        classNames.push('text-warning');
         break;
       case 'danger':
-        classNames.push(styles.textDanger);
+        classNames.push('text-danger');
         break;
     }
 
     if (small) {
-      classNames.push(styles.textSmall);
+      classNames.push('text-sm');
     }
 
     if (muted) {
-      classNames.push(styles.textMuted);
+      classNames.push('text-muted');
     }
 
     if (justify) {
-      classNames.push(styles.dFlex);
-      classNames.push(styles.w100);
+      classNames.push('d-flex');
+      classNames.push('w-100');
       switch (justify) {
         case 'start':
-          classNames.push(styles.justifyContentStart);
+          classNames.push('justify-content-start');
           break;
         case 'end':
-          classNames.push(styles.justifyContentEnd);
+          classNames.push('justify-content-end');
           break;
         case 'center':
-          classNames.push(styles.justifyContentCenter);
+          classNames.push('justify-content-center');
           break;
         case 'between':
-          classNames.push(styles.justifyContentBetween);
+          classNames.push('justify-content-between');
           break;
         case 'around':
-          classNames.push(styles.justifyContentAround);
+          classNames.push('justify-content-around');
           break;
       }
     }

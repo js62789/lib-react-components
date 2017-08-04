@@ -1,14 +1,13 @@
 import React from 'react';
-import styles from './styles.css';
 
 export class Jumbotron extends React.Component {
   render() {
     const { inverted, backgroundImage, ...other } = this.props;
-    const classNames = [ styles.jumbotron ];
+    const classNames = [ 'jumbotron' ];
     const style = {};
 
     if (inverted) {
-      classNames.push(styles.jumbotronInverse);
+      classNames.push('jumbotron-inverse');
     }
 
     if (backgroundImage) {

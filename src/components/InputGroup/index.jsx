@@ -1,5 +1,8 @@
 import React from 'react';
-import styles from './styles.css';
+import PropTypes from 'prop-types';
+import Input from '../Input';
+import Button from '../Button';
+import Dropdown from '../Dropdown';
 
 /**
  * <InputGroup>
@@ -9,9 +12,16 @@ import styles from './styles.css';
  * </InputGroup>
  */
 export class InputGroup extends React.Component {
+  static propTypes = {
+    children: PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.instanceOf(Input),
+      PropTypes.instanceOf(Button),
+      PropTypes.instanceOf(Dropdown)
+    ]))
+  }
   render() {
     return (
-      <div className={styles.inputGroup}>
+      <div className="input-group">
         {this.props.children}
       </div>
     );

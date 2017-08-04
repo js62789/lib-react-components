@@ -5,14 +5,13 @@ import {
   Container,
   Nav,
 } from '../';
-import styles from './styles.css';
 
 export const NavbarBrand = ({ children, href }) => (
-  <a className={styles.navbarBrand} href={href | '#'}>{children}</a>
+  <a className="navbar-brand" href={href | '#'}>{children}</a>
 )
 
 export const NavbarNavLink = ({ active, ...other }) => (
-  <Nav.Link className={`${styles.navLink} ${active ? styles.active : ''}`} {...other} />
+  <Nav.Link className={`nav-link ${active ? 'active' : ''}`} {...other} />
 )
 
 export const NavbarNavItem = (args) => (
@@ -22,13 +21,13 @@ export const NavbarNavItem = (args) => (
 )
 
 export const NavbarNav = ({ children }) => (
-  <Nav className={styles.navbarNav}>
+  <Nav className="navbar-nav">
     {children}
   </Nav>
 )
 
 export const NavbarMenu = ({ children, open }) => (
-  <div className={`${styles.collapse} ${styles.navbarCollapse} ${open ? styles.show : ''}`} id="navbarSupportedContent">
+  <div className={`${'collapse'} ${'navbar-collapse'} ${open ? 'show' : ''}`} id="navbarSupportedContent">
     {children}
   </div>
 )
@@ -36,18 +35,18 @@ export const NavbarMenu = ({ children, open }) => (
 export const NavbarToggle = ({ onClick, open, right }) => (
   <button
     onClick={onClick}
-    className={`${styles.navbarToggler} ${right ? styles.navbarTogglerRight : ''}`}
+    className={`${'navbar-toggler'} ${right ? 'navbar-toggler-right' : ''}`}
     type="button"
     aria-controls="navbarSupportedContent"
     aria-expanded={open}
     aria-label="Toggle navigation"
   >
-    <span className={styles.navbarTogglerIcon}></span>
+    <span className="navbar-toggler-icon"></span>
   </button>
 )
 
 export const NavbarContainer = ({ children }) => (
-  <Container className={styles.container}>{children}</Container>
+  <Container className="container">{children}</Container>
 )
 
 export class Navbar extends React.Component {
@@ -67,6 +66,7 @@ export class Navbar extends React.Component {
 
   render() {
     const {
+      className,
       toggleable,
       inverted,
       fixed,
@@ -77,32 +77,36 @@ export class Navbar extends React.Component {
     } = this.props;
     const { mobileMenuOpen } = this.state;
     const classNames = [
-      styles.navbar,
+      'navbar',
     ];
 
+    if (className) {
+      classNames.push(className);
+    }
+
     if (fixed) {
-      classNames.push(styles.fixedTop);
+      classNames.push('fixed-top');
     }
 
     switch (toggleable) {
       case 'small':
-        classNames.push(styles.navbarToggleableSmall);
+        classNames.push('navbar-toggleable-sm');
         break;
       case 'medium':
-        classNames.push(styles.navbarToggleableMedium);
+        classNames.push('navbar-toggleable-md');
         break;
       case 'large':
-        classNames.push(styles.navbarToggleableLarge);
+        classNames.push('navbar-toggleable-lg');
         break;
       case true:
-        classNames.push(styles.navbarToggleable);
+        classNames.push('navbar-toggleable');
         break;
     }
 
     if (inverted) {
-      classNames.push(styles.navbarInverse);
+      classNames.push('navbar-inverse');
     } else {
-      classNames.push(styles.navbarLight);
+      classNames.push('navbar-light');
     }
 
     return children ? (

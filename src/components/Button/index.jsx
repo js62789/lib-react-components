@@ -1,35 +1,20 @@
 import React from 'react';
-import styles from './styles.css';
 
 export class Button extends React.Component {
   render() {
-    const { className, color, size, ...other } = this.props;
-    const classNames = [ styles.btn ];
+    const { className, color, size, grouped, ...other } = this.props;
+    const classNames = [ 'btn' ];
 
-    switch (color) {
-      case 'primary':
-        classNames.push(styles.btnPrimary);
-        break;
-      case 'info':
-        classNames.push(styles.btnInfo);
-        break;
-      case 'success':
-        classNames.push(styles.btnSuccess);
-        break;
-      case 'warning':
-        classNames.push(styles.btnWarning);
-        break;
-      case 'danger':
-        classNames.push(styles.btnDanger);
-        break;
+    if (color) {
+      classNames.push(`btn-${color}`);
     }
 
     switch (size) {
       case 'small':
-        classNames.push(styles.btnSmall);
+        classNames.push('btn-sm');
         break;
       case 'large':
-        classNames.push(styles.btnLarge);
+        classNames.push('btn-lg');
         break;
     }
 
@@ -37,9 +22,19 @@ export class Button extends React.Component {
       classNames.push(className);
     }
 
-    return (
+    const button = (
       <button className={classNames.join(' ')} {...other} />
     );
+
+    if (grouped) {
+      return (
+        <span className="input-group-btn">
+          {button}
+        </span>
+      )
+    }
+
+    return button;
   }
 }
 
