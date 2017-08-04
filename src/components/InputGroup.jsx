@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from '../Input';
-import Button from '../Button';
-import Dropdown from '../Dropdown';
+import Input from './Input';
+import Button from './Button';
+import Dropdown from './Dropdown';
 
 /**
  * <InputGroup>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { capitalize } from '../../utils';
 
 export class Column  extends React.Component {
   render() {
