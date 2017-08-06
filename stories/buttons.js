@@ -15,6 +15,9 @@ storiesOf('Button', module)
   .add('primary', () => (
     <Button color="primary">Hello Button</Button>
   ))
+  .add('secondary', () => (
+    <Button color="secondary">Hello Button</Button>
+  ))
   .add('info', () => (
     <Button color="info">Hello Button</Button>
   ))
