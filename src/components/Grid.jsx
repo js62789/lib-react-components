@@ -108,6 +108,9 @@ export class Row extends React.Component {
     const Element = this.props.as || 'div';
     const { className, ...other } = this.props;
     const classNames = [ 'row' ];
+    if (className) {
+      classNames.push(className);
+    }
     return (
       <Element className={classNames.join(' ')} {...other} />
     );
