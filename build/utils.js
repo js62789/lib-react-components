@@ -1,0 +1,9 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var capitalize = exports.capitalize = function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.substring(1);
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy91dGlscy5qcyJdLCJuYW1lcyI6WyJjYXBpdGFsaXplIiwic3RyIiwiY2hhckF0IiwidG9VcHBlckNhc2UiLCJzdWJzdHJpbmciXSwibWFwcGluZ3MiOiI7Ozs7O0FBQU8sSUFBTUEsa0NBQWEsU0FBYkEsVUFBYSxDQUFDQyxHQUFEO0FBQUEsU0FBU0EsSUFBSUMsTUFBSixDQUFXLENBQVgsRUFBY0MsV0FBZCxLQUE4QkYsSUFBSUcsU0FBSixDQUFjLENBQWQsQ0FBdkM7QUFBQSxDQUFuQiIsImZpbGUiOiJ1dGlscy5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBjYXBpdGFsaXplID0gKHN0cikgPT4gc3RyLmNoYXJBdCgwKS50b1VwcGVyQ2FzZSgpICsgc3RyLnN1YnN0cmluZygxKTtcbiJdfQ==
