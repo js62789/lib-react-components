@@ -19,8 +19,17 @@ export class Image extends React.Component {
   }
 
   render() {
-    const { width, height, rounded, bordered, className, alt } = this.props;
-    const classNames = [ 'image' ];
+    const {
+      width,
+      height,
+      rounded,
+      bordered,
+      className,
+      alt,
+      fluid,
+      thumbnail,
+    } = this.props;
+    const classNames = [];
     const inlineStyles = this.props.style || {};
 
     const src = this.props.src || this.generateSrcPlaceholder({
@@ -49,6 +58,14 @@ export class Image extends React.Component {
 
     if (width) {
       inlineStyles.width = width;
+    }
+
+    if (fluid) {
+      classNames.push('img-fluid');
+    }
+
+    if (thumbnail) {
+      classNames.push('img-thumbnail');
     }
 
     return (
